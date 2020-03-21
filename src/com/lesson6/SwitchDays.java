@@ -18,45 +18,64 @@ public class SwitchDays {
 	public static void main(String[] args) {
 		
 		// declare a variable to store the day entered by the user
-		String day;
+		int day;
         // declare a variable named scan to be able to work with objects of type Scanner
 		Scanner scan;
         // create a Scanner object to read input from the keyboard
 		scan = new Scanner(System.in);
         // prompt the user to enter a day of the week
-        System.out.println("Please enter a day of the week to see whether there are any classes scheduled for that day");
+//        System.out.println("Please enter a day of the week to see whether there are any " +
+//        "classes scheduled for that day");
+		 System.out.println("Please enter a day (as number i.e.1-7) of the week to see whether there are any " +
+		        "classes scheduled for that day!");
         // read the string provided by the user
-        day = scan.next();
+        //day = scan.next();
+		 day = scan.nextInt();
         // we know that Java is case sensitive, therefore let's convert the word provided by the user to lower case so that the program works 
         //independent of the way the user writes the word e.g. Monday, monDAY, MoNdAy
         // toLowerCase() is a method declared in the class String. The method converts all the characters in a given string to 
         //lower case
-        day = day.toLowerCase();
-        switch (day) {
-//note: a switch statement accepts a constant expression/variable of type String only starting with Java version 7; in earlier versions the compiler shows an "incompatible types" error.
-            case "monday":
-                System.out.println("Evening classes at 19:00");
-                break;
-            case "tuesday":
-            	System.out.println("No classes");
-            break;
-            case "wednesday":
-            	System.out.println("Evening classes at 19:00");
-            	break;
-            case "thursday":
-            	System.out.println("No classes");
-            	break;
-            case "friday":
-            	System.out.println("No classes");
-            	break;
-            case "saturday":
-            	System.out.println("Whole day Labs :)");
-            	break;
-            case "sunday":
-            	System.out.println("It's finally Sunday!");
-            	break;
-            	default:
-            		System.out.println("check your input mate/fella/gal");
-        }
+       //day = day.toLowerCase();
+//        switch (day) {
+////note: a switch statement accepts a constant expression/variable of type String only starting with Java version 7; in earlier versions the compiler shows an "incompatible types" error.
+//            case "monday":
+//            case "wednesday":
+//                System.out.println("Evening classes at 19:00");
+//                break;
+//            case "tuesday":
+//            case "thursday":
+//            case "friday":
+//            	System.out.println("No classes");
+//            break;
+//            case "saturday":
+//            	System.out.println("Whole day Labs :)");
+//            	break;
+//            case "sunday":
+//            	System.out.println("It's finally Sunday!");
+//            	break;
+//            	default:
+//            		System.out.println("check your input mate/fella/gal");
+//        }
+		 
+		 switch (day) {
+		//note: a switch statement accepts a constant expression/variable of type String only starting with Java version 7; in earlier versions the compiler shows an "incompatible types" error.
+		            case 1:
+		            case 3:
+		                System.out.println("Evening classes at 19:00");
+		                break;
+		            case 2:
+		            case 4:
+		            case 5:
+		            	System.out.println("No classes");
+		            break;
+		            case 6:
+		            	System.out.println("Whole day Labs :)");
+		            	break;
+		            case 7:
+		            	System.out.println("It's finally Sunday!");
+		            	break;
+		            	default:
+		            		System.out.println("check your input mate/fella/gal");
+		        }
     }
 }
